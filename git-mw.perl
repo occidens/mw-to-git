@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # Copyright (C) 2013
 #     Benoit Person <benoit.person@ensimag.imag.fr>
@@ -18,6 +18,9 @@ use HTML::TreeBuilder;
 
 use Git;
 use MediaWiki::API;
+
+use FindBin qw($RealBin);
+use lib "$RealBin";
 use Git::Mediawiki qw(clean_filename connect_maybe
 					EMPTY HTTP_CODE_PAGE_NOT_FOUND);
 

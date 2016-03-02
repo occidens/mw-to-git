@@ -1,4 +1,4 @@
-#! /usr/bin/perl
+#! /usr/bin/env perl
 
 # Copyright (C) 2011
 #     Jérémie Nikaes <jeremie.nikaes@ensimag.imag.fr>
@@ -14,6 +14,9 @@
 use strict;
 use MediaWiki::API;
 use Git;
+
+use FindBin qw($RealBin);
+use lib "$RealBin";
 use Git::Mediawiki qw(clean_filename smudge_filename connect_maybe
 					EMPTY HTTP_CODE_OK);
 use DateTime::Format::ISO8601;
